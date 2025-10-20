@@ -1,0 +1,167 @@
+ html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("595.png");
+  background-repeat: no-repeat;
+  background-size: cover;           
+  background-position: center;     
+  background-attachment: fixed;    
+  
+  font-family: "Rancho", cursive;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  min-height: 100vh;              
+}
+
+
+
+.container-center {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  width: 60%;
+  max-width: 600px;
+  padding: 40px;
+  position: relative;
+  background: linear-gradient(
+    rgba(164, 108, 179, 0.6),
+    rgba(51, 34, 58, 0.5)
+  );
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+
+.container-center:hover {
+  transform: scale(1.02);
+}
+
+
+
+ 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 34, 58, 0.199);
+  z-index: -1;
+}
+ 
+h1, h2, p {
+  margin-top: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+  #save_el {
+      display: none;
+    }
+#increment-btn,
+#save-btn {
+  background: rgb(200, 139, 224);
+  border: 2px solid rgba(148, 0, 233, 0.178);
+  color: white;
+  width: 70%;
+  max-width: 250px;
+  padding: 13px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#increment-btn:hover,
+#save-btn:hover {
+  background-color: rgba(172, 255, 47, 0.126);
+  color: black;
+  cursor: pointer;
+}
+
+ 
+@media (max-width: 900px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container-center {
+    width: 80%;
+    padding: 15px;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  #increment-btn,
+  #save-btn {
+    width: 80%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .container-center {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  #increment-btn,
+  #save-btn {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+ 
+@media (max-width: 400px) {
+  .container-center {
+    width: 95%;
+    padding: 15px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #increment-btn,
+  #save-btn {
+    width: 100%;
+  }
+}
